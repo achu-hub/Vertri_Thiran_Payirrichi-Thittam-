@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ComicCraft - AI Comic Story Creator</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">GENERATIVE AI PROJECT</p>
+      <h1>ComicCraft</h1>
+      <p class="subtitle">Create a comic story with Gemini AI.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Create Your Comic</h2>
+
+      <label for="prompt">Story idea</label>
+      <textarea id="prompt" rows="4" placeholder="Example: A student discovers a tiny robot that can predict the future."></textarea>
+
+      <div class="grid">
+        <div>
+          <label for="genre">Genre</label>
+          <select id="genre">
+            <option>Adventure</option>
+            <option>Fantasy</option>
+            <option>Science Fiction</option>
+            <option>Comedy</option>
+            <option>Mystery</option>
+            <option>Superhero</option>
+            <option>Drama</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="panels">Panels</label>
+          <input id="panels" type="number" min="1" max="12" value="6">
+        </div>
+      </div>
+
+      <label for="characters">Characters (optional)</label>
+      <textarea id="characters" rows="3" placeholder="Example: Arun - curious student; Robo - friendly robot"></textarea>
+
+      <button id="generateBtn" onclick="generateComic()">Generate Comic</button>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section id="result" class="result hidden">
+      <div class="story-header">
+        <h2 id="title"></h2>
+        <p id="summary"></p>
+      </div>
+
+      <div id="panelsContainer" class="panels"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>ComicCraft • Gemini-powered AI comic creator</p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
